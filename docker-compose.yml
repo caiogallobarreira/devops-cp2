@@ -1,0 +1,49 @@
+version: '3'
+services:
+  db:
+    build: ./sql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root@dimdim
+      MYSQL_DATABASE: dimdim
+      MYSQL_USER: dimdim-banco
+      MYSQL_PASSWORD: db@dimdim
+    ports:
+      - 3306:3306
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+
+  nodejs:
+    build: ./api
+    restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - ./api:/usr/src/app
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_NAME: dimdim
+      DB_USER: dimdim-banco
+      DB_PASS: db@dimdim
+    depends_on:
+      - db
+  
+  nginx:
+    build: ./nginx
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/html:/var/www
+    depends_on:
+      - nodejs 
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
