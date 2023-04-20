@@ -1,4 +1,4 @@
 FROM mysql
 
-RUN adduser -D dimdim
+RUN adduser dimdim
 USER dimdim
