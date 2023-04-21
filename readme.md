@@ -1,7 +1,7 @@
-# 👨‍💼 Sistema de Gestão de Funcionários - SGF
+# 👨‍💼 Sistema de Gerenciamento de Funcionários - SGF
 ## 📝 Descrição
 >
-> O SGF é um sistema de gestão de funcionários, que tem como objetivo facilitar o gerenciamento do cadastro, atualização e exclusão de funcionários de uma empresa.
+> O SGF é um gerenciador de funcionários, que tem como objetivo facilitar o gerenciamento do cadastro, atualização e exclusão de funcionários de uma empresa.
 > 
 > **Este projeto foi idealizado e desenvolvido por:**
 
@@ -36,6 +36,7 @@
 >  - **nginx/html/css/** - Pasta que contém os arquivos de estilo do servidor web;
 >  - **nginx/html/js/** - Pasta que contém os arquivos de script do servidor web;
 >  - **sql/** - Pasta que contém os arquivos de configuração do MySQL;
+>  - **sql/data/** - Pasta que contém os arquivos de dados do MySQL;
 
 ## 📦 Instalação
 >  ### **Pré-requisitos:**
@@ -47,16 +48,18 @@
 >
 >  1. Clone o repositório:
 >  ```bash
->  git clone
+>  git clone https://github.com/caiogallobarreira/devops-cp2
 >  ```
+>
 >  2. Entre na pasta do projeto:
 > ```bash
-> cd sgf
+> cd devops-cp2
 > ```
 >  3. Execute o comando:
 >  ```bash
->  docker-compose up
+>  docker-compose up -d
 >  ```
+>
 >  4. Acesse o servidor web através do endereço:
 >  ```bash
 >  http://localhost:8080
