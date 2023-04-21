@@ -81,7 +81,7 @@ const triggerModal = (id) => {
     // console.log(funcionario)
     
     modal.innerHTML = `
-    <span id="close" onClick="closeModal()">&times;</span>
+    <span id="close" onClick="closeModal()"><span>&times;</span></span>
     <form id="editModalForm" data-key="${funcionario.funcionario_id}">
         <div>
             <label for="nome">Nome</label>

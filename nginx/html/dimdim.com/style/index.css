@@ -66,6 +66,7 @@ table tr:first-child{
 table tr:not(:first-child){
     background: #fff;
     color: #000;
+    transition-duration: 0.2s;
 }
 
 table tr:not(:first-child):hover{
@@ -111,7 +112,17 @@ span#close{
     color: #fff;
     background: #3b5998;
     padding: 5px;
-    padding: 10px   
+    padding-left: 10px;
+    transition-duration: 0.2s;
+}
+
+span#close:hover{
+    background: #2f4779;
+}
+
+span#close:active span{
+    background: #1e305f;
+    /* transform: scale(0.9); */
 }
 
 form{
@@ -155,6 +166,7 @@ form input[type="submit"]{
     background: #3b5998;
     color: #fff;
     cursor: pointer;
+    transition-duration: 0.2s;
 }
 
 form input[type="submit"]:hover{
@@ -163,6 +175,7 @@ form input[type="submit"]:hover{
 
 form input[type="submit"]:active{
     background: #1e305f;
+    transform: scale(0.9);
 }
 
 form input[type="submit"]:focus{
@@ -195,6 +208,7 @@ form button{
     background: #3b5998;
     color: #fff;
     cursor: pointer;
+    transition-duration: 0.2s;
 }
 
 form button:hover{
@@ -203,6 +217,7 @@ form button:hover{
 
 form button:active{
     background: #1e305f;
+    transform: scale(0.9);
 }
 
 form button:focus{
